@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Django/blog_clone/.idea/blog_clone.iml" filepath="$PROJECT_DIR$/../../Django/blog_clone/.idea/blog_clone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/financepeer.iml" filepath="$PROJECT_DIR$/.idea/financepeer.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br><br>
+    <div class="container">
+       
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1>UPLOAD FILE:</h1>
+            <br>
+            <input type="file" name="file">
+            <input type="submit" class="btn btn-primary" style="float: center;">
+        </form>
+        <br><br>
+        <h1 style="color:blue;text-align:center;">DISPLAY DATA</h1>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>UserId</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Body</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in data %}
+                    <tr>
+                        <td>{{ user.userId }}</td>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.title }}</td>
+                        <td>{{ user.body }}</td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
